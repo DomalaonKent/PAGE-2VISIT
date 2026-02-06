@@ -1,0 +1,160 @@
+<div class="container">
+  <div class="left-panel">
+    <h2>Select Preferred Office to Visit</h2>
+    
+    <div class="search-box">
+      <input type="text" placeholder="Search Offices...">
+      <button class="menu-btn">☰</button>
+    </div>
+
+    <div class="office-list">
+      <div class="office-item">
+        <input type="checkbox" id="ord">
+        <label for="ord">  Office of the Regional Director (ORD)</label>
+        <span class="dropdown-arrow">⌄</span>
+      </div>
+      
+      <div class="office-item">
+        <input type="checkbox" id="legal">
+        <label for="legal">  Legal Unit</label>
+        <span class="dropdown-arrow">⌄</span>
+      </div>
+      
+      <div class="office-item">
+        <input type="checkbox" id="cwapu">
+        <label for="cwapu">  Consumer Welfare and Protection Unit (CWaPu)</label>
+        <span class="dropdown-arrow">⌄</span>
+      </div>
+      
+      <div class="office-item">
+        <input type="checkbox" id="eod">
+        <label for="eod">  Enforcement and Operations Division (EOD)</label>
+        <span class="dropdown-arrow">⌄</span>
+      </div>
+      
+      <div class="office-item">
+        <input type="checkbox" id="other">
+        <label for="other">  Other Offices</label>
+        <span class="dropdown-arrow">⌄</span>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button class="btn-secondary">Expand All</button>
+      <button class="btn-secondary">Collapse All</button>
+      <button class="btn-primary">Submit</button>
+    </div>
+  </div>
+
+  <div class="right-panel">
+    <div class="header">
+      <h2>Citizen Charter Services</h2>
+      <button class="back-btn">↶</button>
+    </div>
+
+    <div class="services-list">
+      <div class="service-item">
+        <span>Citizen Charter Service #1 : Radio Operator Examination</span>
+        <span class="dropdown-arrow">⌄</span>
+        <span class="info-icon">i</span>
+      </div>
+      
+      <div class="service-item">
+        <span>Citizen Charter Service #2 : Radio Operator Certificate</span>
+        <span class="dropdown-arrow">⌄</span>
+        <span class="info-icon">i</span>
+      </div>
+      
+      <div class="service-item">
+        <span>Citizen Charter Service #3 : Certificates, Permits, and Licenses in the Amateur Service</span>
+        <span class="dropdown-arrow">⌄</span>
+        <span class="info-icon">i</span>
+      </div>
+      
+      <div class="service-item" (click)="toggleOtherServices()">
+        <span>Other Citizen Charter Service #4-14</span>
+        <span class="dropdown-arrow">{{ showOtherServices ? '⌃' : '⌄' }}</span>
+        <span class="info-icon">i</span>
+      </div>
+
+      <!-- Additional Services (Hidden by default) -->
+      <div class="additional-services" *ngIf="showOtherServices">
+        <div class="service-item sub-service">
+          <span>Citizen Charter Service #5-7 : Maritime Service</span>
+          <span class="dropdown-arrow">⌄</span>
+          <span class="info-icon">i</span>
+        </div>
+        
+        <div class="service-item sub-service">
+          <span>Citizen Charter Service #8 : Public Telecom Entities</span>
+          <span class="dropdown-arrow">⌄</span>
+          <span class="info-icon">i</span>
+        </div>
+        
+        <div class="service-item sub-service">
+          <span>Citizen Charter Service #9-12 : Government or Private RSL</span>
+          <span class="dropdown-arrow">⌄</span>
+          <span class="info-icon">i</span>
+        </div>
+        
+        <div class="service-item sub-service">
+          <span>Citizen Charter Service #13 : Temporary Permit to Demonstrate and Propagate for RSL</span>
+          <span class="dropdown-arrow">⌄</span>
+          <span class="info-icon">i</span>
+        </div>
+        
+        <div class="service-item sub-service">
+          <span>Citizen Charter Service #14 : Radio Communication Equipment</span>
+          <span class="dropdown-arrow">⌄</span>
+          <span class="info-icon">i</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Choose the service you require</h3>
+    
+    <div class="service-options">
+      <div class="option-card">
+        <div class="option-icon complaints-icon">📋</div>
+        <span>Complaints</span>
+      </div>
+      
+      <div class="option-card">
+        <div class="option-icon scam-icon">⚠️</div>
+        <span>Scam</span>
+      </div>
+      
+      <div class="option-card">
+        <div class="option-icon unblocking-icon">📱</div>
+        <span>Unblocking</span>
+      </div>
+      
+      <div class="option-card">
+        <div class="option-icon blocking-icon">🚫</div>
+        <span>Blocking</span>
+      </div>
+    </div>
+
+    <div class="inquiry-section">
+      <div class="inquiry-header">
+        <span class="question-icon">❓</span>
+        <span>For Inquiries</span>
+      </div>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <label>Email :</label>
+          <input type="text" class="contact-input">
+        </div>
+        <div class="contact-item">
+          <label>Phone :</label>
+          <input type="text" class="contact-input">
+        </div>
+        <div class="contact-item">
+          <label>Website :</label>
+          <input type="text" class="contact-input">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
